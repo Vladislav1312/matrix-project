@@ -47,5 +47,5 @@ calc_complements_tests.c<br/>
 determinant_tests.c<br/>
 inverse_matrix_tests.c<br/>
 s21_all_tests.h<br/>
-s21_matrix.h<br/>
+s21_matrix.h<br/><br/>
 Для тестирование кода и создания отчета о покрытии - создаются обьектые файлы и статическая библиотека s21_matrix.a
