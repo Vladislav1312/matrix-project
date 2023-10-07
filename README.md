@@ -35,17 +35,17 @@ int s21_inverse_matrix(matrix_t *A, matrix_t *result);<br/>
 
 А также тестовые и заголовочные файлы:
 
-create_matrix_tests.c
-remove_matrix_tests.c
-eq_matrix_tests.c
-sum_matrix_tests.c
-sub_matrix_tests.c
-mult_number_tests.c
-mult_matrix_tests.c
-transpose_tests.c
-calc_complements_tests.c
-determinant_tests.c
-inverse_matrix_tests.c
-s21_all_tests.h
-s21_matrix.h
+create_matrix_tests.c<br/>
+remove_matrix_tests.c<br/>
+eq_matrix_tests.c<br/>
+sum_matrix_tests.c<br/>
+sub_matrix_tests.c<br/>
+mult_number_tests.c<br/>
+mult_matrix_tests.c<br/>
+transpose_tests.c<br/>
+calc_complements_tests.c<br/>
+determinant_tests.c<br/>
+inverse_matrix_tests.c<br/>
+s21_all_tests.h<br/>
+s21_matrix.h<br/>
 Для тестирование кода и создания отчета о покрытии - создаются обьектые файлы и статическая библиотека s21_matrix.a
