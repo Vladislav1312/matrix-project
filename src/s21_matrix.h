@@ -7,16 +7,16 @@ typedef struct matrix_struct {
     int columns;
 } matrix_t;
 
-//Вывод матрицы
-void s21_print_matrix(matrix_t result);
+//Вывод матрицы +
+void s21_print_matrix(matrix_t *result); 
 
-// Создание матриц
+// Создание матриц +
 int s21_create_matrix(int rows, int columns, matrix_t *result);
 
-// Очистка матриц
+// Очистка матриц +
 void s21_remove_matrix(matrix_t *A);
 
-// Сравнение матриц
+// Сравнение матриц +
 int s21_eq_matrix(matrix_t *A, matrix_t *B);
 
 // Сложение матриц
