@@ -16,9 +16,6 @@ int s21_create_matrix(int rows, int columns, matrix_t *result){
         result -> columns = columns;
         for(int i = 0; i < rows; i++){
             result -> matrix[i] = (double*)calloc(columns, sizeof(double)); //Выделение памяти на кол-во столбцов
-            for(int j = 0; j < columns; j++){
-                result -> matrix[i][j] = 2;
-            }
         }
     }else{
         flag = 1; //Ошибка компиляции - Некорректная матрица;

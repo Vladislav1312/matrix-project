@@ -10,25 +10,51 @@ int main(){
     matrix_t res;
 
     int create_A = s21_create_matrix(2,2,&A);
+    s21_add_value_matrix(&A);
 
     printf("\nВывод матрицы A:\n\n");
     s21_print_matrix(&A);
     printf("\nОшибка CREATE_MATRIX - %d", create_A);
 
+    
+
     int create_B = s21_create_matrix(2,2,&B);
+    s21_add_value_matrix(&B);
 
     printf("\n\nВывод матрицы B:\n\n");
     s21_print_matrix(&B);
     printf("\nОшибка CREATE_MATRIX - %d\n", create_B);
     
     
-    printf("\n******Сравнение двух матриц******\n");
-    printf("Вывод %d\n", s21_eq_matrix(&A, &B));
+    
+    int create_RES = s21_create_matrix(A.rows, A.columns, &res);
 
+    
 
+    // int sum = s21_sum_matrix(&A, &B, &res);
+    // printf("\n\nВывод матрицы RES(sum):\n\n");
+    // s21_print_matrix(&res);
+    // printf("\nОшибка SUM_MATRIX - %d\n", sum);
+
+    // int sub = s21_sub_matrix(&A, &B, &res);
+    // printf("\n\nВывод матрицы RES(sub):\n\n");
+    // s21_print_matrix(&res);
+    // printf("\nОшибка SUB_MATRIX - %d\n", sub);
+
+    double num = 2.3;
+    int mult_number = s21_mult_number(&A, num, &res);
+    printf("\n\nВывод матрицы RES(mult_number):\n\n");
+    s21_print_matrix(&res);
+    printf("\nОшибка MULT_NUMBER - %d\n", mult_number);
+
+    
+
+    // printf("\n________Сравнение двух матриц________\n");
+    // printf("Вывод %d\n", s21_eq_matrix(&A, &B));
 
     s21_remove_matrix(&A);
     s21_remove_matrix(&B);
+    s21_remove_matrix(&res);
  
     return 0;
 }

@@ -8,7 +8,10 @@ typedef struct matrix_struct {
 } matrix_t;
 
 //Вывод матрицы +
-void s21_print_matrix(matrix_t *result); 
+void s21_print_matrix(matrix_t *A); 
+
+//Ввод значений в матрицу +
+void s21_add_value_matrix(matrix_t *A);
 
 // Создание матриц +
 int s21_create_matrix(int rows, int columns, matrix_t *result);
@@ -19,16 +22,16 @@ void s21_remove_matrix(matrix_t *A);
 // Сравнение матриц +
 int s21_eq_matrix(matrix_t *A, matrix_t *B);
 
-// Сложение матриц
+// Сложение матриц +
 int s21_sum_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
 
-// Вычитание матриц
+// Вычитание матриц +
 int s21_sub_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
 
-// Умножение матрицы на число
+// Умножение матрицы на число +
 int s21_mult_number(matrix_t *A, double number, matrix_t *result);
 
-// Умножение двух матриц
+// Умножение двух матриц 
 int s21_mult_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
 
 // Транспонирование матрицы
