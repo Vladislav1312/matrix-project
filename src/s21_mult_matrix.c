@@ -14,9 +14,19 @@ int s21_mult_matrix(matrix_t *A, matrix_t *B, matrix_t *result){
         flag = 1;
     }
     if((A -> rows <= 0 || A-> columns <= 0) || (B -> rows <= 0 || B -> columns <= 0) || (A -> columns != B -> rows)){ //Матрицы имеют неправильный размер
-        flag = 1;  
+        flag = 2;  
     }
-    if((A -> rows != B -> rows) || (A-> columns != B -> columns)){ //Размер матриц не совпадает
-        flag = 2;
+
+    if(!flag){
+        s21_create_matrix(A -> rows, B -> columns, result);
+        for(int i = 0; i < result -> rows; i++){
+            for(int j = 0; j < result -> columns; j++){
+                result -> matrix[i][j] = 0;
+                for(int x = 0; x < A -> columns; x++){
+                    result -> matrix[i][j] += A -> matrix[i][x] * B -> matrix[x][j];
+                }
+            }
+        }
     }
+    return flag;
 }

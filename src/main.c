@@ -3,13 +3,11 @@
 #include "s21_matrix.h"
 
 int main(){
-    int rows = 2; //Количество строк
-    int column = 2; //Количество столбцов
     matrix_t A;
     matrix_t B;
     matrix_t res;
 
-    int create_A = s21_create_matrix(2,2,&A);
+    int create_A = s21_create_matrix(2,3,&A);
     s21_add_value_matrix(&A);
 
     printf("\nВывод матрицы A:\n\n");
@@ -17,7 +15,6 @@ int main(){
     printf("\nОшибка CREATE_MATRIX - %d", create_A);
 
     
-
     int create_B = s21_create_matrix(2,2,&B);
     s21_add_value_matrix(&B);
 
@@ -27,9 +24,9 @@ int main(){
     
     
     
-    int create_RES = s21_create_matrix(A.rows, A.columns, &res);
+    // int create_RES = s21_create_matrix(2,3, &res);
+    // printf("\n%d\n", create_RES);
 
-    
 
     // int sum = s21_sum_matrix(&A, &B, &res);
     // printf("\n\nВывод матрицы RES(sum):\n\n");
@@ -41,11 +38,21 @@ int main(){
     // s21_print_matrix(&res);
     // printf("\nОшибка SUB_MATRIX - %d\n", sub);
 
-    double num = 2.3;
-    int mult_number = s21_mult_number(&A, num, &res);
-    printf("\n\nВывод матрицы RES(mult_number):\n\n");
+    // double num = 2.3;
+    // int mult_number = s21_mult_number(&A, num, &res);
+    // printf("\n\nВывод матрицы RES(mult_number):\n\n");
+    // s21_print_matrix(&res);
+    // printf("\nОшибка MULT_NUMBER - %d\n", mult_number);
+
+    // int mult = s21_mult_matrix(&A, &B, &res);
+    // printf("\n\nВывод матрицы RES(mult):\n\n");
+    // s21_print_matrix(&res);
+    // printf("\nОшибка MULT_MATRIX - %d\n", mult);
+
+    int transpose = s21_transpose(&A, &res);
+    printf("\n\nВывод матрицы RES(transpose):\n\n");
     s21_print_matrix(&res);
-    printf("\nОшибка MULT_NUMBER - %d\n", mult_number);
+    printf("\nОшибка TRANSPOSE_MATRIX - %d\n", transpose);
 
     
 
