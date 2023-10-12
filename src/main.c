@@ -7,7 +7,7 @@ int main(){
     matrix_t B;
     matrix_t res;
 
-    int create_A = s21_create_matrix(2,3,&A);
+    int create_A = s21_create_matrix(3,3,&A);
     s21_add_value_matrix(&A);
 
     printf("\nВывод матрицы A:\n\n");
@@ -24,8 +24,8 @@ int main(){
     
     
     
-    // int create_RES = s21_create_matrix(2,3, &res);
-    // printf("\n%d\n", create_RES);
+    int create_RES = s21_create_matrix(2,2, &res);
+    printf("\n%d\n", create_RES);
 
 
     // int sum = s21_sum_matrix(&A, &B, &res);
@@ -49,10 +49,15 @@ int main(){
     // s21_print_matrix(&res);
     // printf("\nОшибка MULT_MATRIX - %d\n", mult);
 
-    int transpose = s21_transpose(&A, &res);
-    printf("\n\nВывод матрицы RES(transpose):\n\n");
+    // int transpose = s21_transpose(&A, &res);
+    // printf("\n\nВывод матрицы RES(transpose):\n\n");
+    // s21_print_matrix(&res);
+    // printf("\nОшибка TRANSPOSE_MATRIX - %d\n", transpose);
+
+    int calc_complements = s21_calc_complements(&A, &res);
+    printf("\n\nВывод матрицы RES(calc_complements):\n\n");
     s21_print_matrix(&res);
-    printf("\nОшибка TRANSPOSE_MATRIX - %d\n", transpose);
+    printf("\nОшибка CALC_COMPLEMENTS - %d\n", calc_complements);
 
     
 

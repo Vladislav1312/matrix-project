@@ -6,8 +6,8 @@
 //1 - Ошибка, некорректная матрица;
 //2 - Ошибка вычисления(несовпадающие размеры матриц; матрица, для которой нельзя провести вычисления и тд.);
 
-// Транспонирование матрицы
-int s21_transpose(matrix_t *A, matrix_t *result){
+//Минор и матрица алгебраических дополнений
+int s21_calc_complements(matrix_t *A, matrix_t *result){
     int flag = 0; //Ошибка компиляции - OK
 
     if(A -> matrix == NULL){ //Матрица == NULL
@@ -17,12 +17,16 @@ int s21_transpose(matrix_t *A, matrix_t *result){
         flag = 1;  
     }
 
-    if(!flag){
-        s21_create_matrix(A -> columns, A -> rows, result);
-        for(int i = 0; i < A -> columns; i++){
-            for(int j = 0; j < A -> rows; j++){
-                result -> matrix[i][j] = A -> matrix[j][i];
-            }
+    matrix_t minor;
+    int rows_minor = (A -> rows) - 1;
+    int columns_minor = (A -> columns) - 1;
+    s21_create_matrix(rows_minor, columns_minor, &minor);
+
+    
+
+    for(int i = 0; i < result -> rows; i++){
+        for(int j = 0; j < result -> columns; j++){
+            result -> matrix[i][j] = 0;
         }
     }
     return flag;

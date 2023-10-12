@@ -34,7 +34,7 @@ int s21_mult_number(matrix_t *A, double number, matrix_t *result);
 // Умножение двух матриц +
 int s21_mult_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
 
-// Транспонирование матрицы
+// Транспонирование матрицы +
 int s21_transpose(matrix_t *A, matrix_t *result);
 
 // Минор матрицы и матрица алгебраических дополнений
