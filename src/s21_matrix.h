@@ -2,13 +2,17 @@
 #define S21_MATRIX_H_
 
 typedef struct matrix_struct {
-    double** matrix;
-    int rows;
-    int columns;
+  double **matrix;
+  int rows;
+  int columns;
 } matrix_t;
 
+double s21_get_determinant_minor(matrix_t *A, int n);
+void get_minor(matrix_t *minor_matrix, matrix_t *A, int row_minor,
+               int column_minor);
+
 //Вывод матрицы +
-void s21_print_matrix(matrix_t *A); 
+void s21_print_matrix(matrix_t *A);
 
 //Ввод значений в матрицу +
 void s21_add_value_matrix(matrix_t *A);
@@ -37,13 +41,13 @@ int s21_mult_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
 // Транспонирование матрицы +
 int s21_transpose(matrix_t *A, matrix_t *result);
 
-// Минор матрицы и матрица алгебраических дополнений
+// Минор матрицы и матрица алгебраических дополнений +
 int s21_calc_complements(matrix_t *A, matrix_t *result);
 
-// Определитель матрицы
+// Определитель матрицы +
 int s21_determinant(matrix_t *A, double *result);
 
-// Обратная матрица
+// Обратная матрица +
 int s21_inverse_matrix(matrix_t *A, matrix_t *result);
 
 #endif
